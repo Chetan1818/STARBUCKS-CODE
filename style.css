@@ -1,0 +1,230 @@
+:root{
+    --starbucks-clr:#00653d;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+/* -------------------------------- menu bar --------------------------------*/
+.menu-container{
+    display: flex;
+    margin-top: 3vh;
+    margin-left:13vh;
+    margin-right: 20vh;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+ 
+    
+}
+
+
+nav{
+    
+    display: flex;
+   
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    padding: 10px;
+    margin: 10px;
+   
+    border-radius: 75px;
+    background-color: white;
+    color:black;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 5rem;
+    font-family: 'Alegreya Sans SC', sans-serif;
+
+}
+nav ul li:hover{
+    background-color:var(--starbucks-clr);
+    color: white;
+    opacity: 1;
+    transform:scale(1.05);
+
+   
+
+ 
+}
+nav ul li:hover a {
+    color: white; 
+}
+/*-------------------------- Typing Animation Text ------------------------------*/
+.main{
+    margin-top: 0vh;
+}
+.its, .static {
+    font-size: 40px;
+    text-transform: lowercase;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: #323232;
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+.static{
+    margin-top: 11px;
+}
+.wrapper{
+    display:flex;
+}
+
+.dynamic{
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    overflow: hidden;
+    
+}
+.dynamic li{
+    margin: 0 0 0 15px;
+    color: var(--starbucks-clr);
+    font-size: 48px;
+    font-family: 'Kanit','Alegreya Sans SC', sans-serif;
+    position: relative;
+    top:0;
+
+    animation: slide 6s steps(4) infinite;
+}
+.dynamic li span{
+    position: relative;
+    margin:0;
+    padding: 0;
+    
+}
+.dynamic li span::after{
+    content: '';
+
+    position:absolute;
+    height: 100%;
+    width:100%;
+    background-color: white;
+    left:0;
+    border-left:8px solid var(--starbucks-clr);
+
+    animation:typing 1.5s steps(16) infinite;
+
+}@keyframes typing{
+    100%{
+        left:100%;
+        margin:0 -35px 0 35px;
+    }
+}@keyframes slide{
+    100%{
+        top:-300px;
+    }
+}
+.para {
+    margin-top: 0; 
+    width: 700px;
+    word-wrap: normal;
+    font-size: 1.5rem;
+    color: #323232;
+}
+.main{
+    margin-top: 15vh;
+    margin-left:13vh;
+}
+.learn{
+    padding: 10px;
+    margin:10px;
+    border-radius: 75px;
+    background-color: var(--starbucks-clr);
+    width: fit-content;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color,color 0.3s ease-in;
+    
+}
+.learn:hover{
+    background-color: white;
+    color: var(--starbucks-clr);
+    box-shadow: 0px 0px 0px;
+}
+/* footer */
+.footer{
+    display: flex;
+    width:800px;
+    
+    margin-top: 10vh;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.7rem;
+}a>img{
+    width:60px;
+    margin: 0px 10px 0px 10px;
+}
+.footer a:hover{
+    animation: moveimg 0.5s ease-in-out 1 forwards ;
+}.comp{
+    border-width: 0px 3px 0px 3px;
+    padding: 0px 10px;
+    margin: 0px 10px 0px 10px;
+    border-color: black;
+    border-style: solid;
+    font-family: 'Kanit','Alegreya Sans SC', sans-serif;
+    color:var(--starbucks-clr); 
+    font-size: 2rem;
+    text-shadow: 1px 2px #323232;
+}
+@keyframes moveimg {
+    100%{
+        transform: translateY(-15px);
+    }
+}.inside_con{
+    display: flex;
+    align-items: center;
+    border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%  ;
+    background-color: var(--starbucks-clr);
+    height:500px;
+    width: 600px;
+    z-index: 2;
+    top: 23%;
+    left:114vh;
+    position: absolute;
+}.setpos{
+    position: absolute;
+    top:38%;
+    left: 125vh;
+    z-index: 3;
+    animation: imagemove 10s ease-in-out infinite ;
+}@keyframes imagemove{
+    50%{
+        transform: translateY(-20%);
+    }100%{
+        transform: translateY(0%);
+    }
+} .in-inside{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 3;
+    align-items: center;
+    width: fit-content;
+    color:white;
+    background-color: var(--starbucks-clr);
+    position: absolute;
+    top: 38%;
+    left: 198vh;
+
+
+}svg{
+    margin: 8px;
+}
